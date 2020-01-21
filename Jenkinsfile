@@ -25,9 +25,6 @@ pipeline {
             }
         }
         stage('Deliver Development') {
-            when {
-                branch 'master'
-            }
             steps {
                 echo 'Launching application server'
                 sh './jenkins/scripts/deliver.sh'
